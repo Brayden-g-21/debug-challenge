@@ -18,8 +18,23 @@
       There is also a missing tag for this text.
     </p>
     <br>
-    <input type="text" id="name" placeholder="Enter your name">
+    <input type="textbox" id="name" placeholder="Enter your name">
     <div class="display-text" id="displayText"></div>
-    <script src="sc"></script>
+    <script>
+      let input = document.querySelector("#name");
+      let display = document.querySelector(".display-text");
+
+      input.addEventListener("input", function() {
+      const name = input.value;
+   
+      display.textContent = name;
+      });
+
+      function simpleMath(x, y) {
+      console.log(x + y)
+      };
+
+      simpleMath(2, 3);
+    </script>
   </body>
 </html>
